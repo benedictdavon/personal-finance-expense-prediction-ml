@@ -155,7 +155,7 @@ Clustering:
 ## Project Structure
 
 ```text
-AI-Capstone-Homework-1/
+personal-finance-expense-prediction-ml/
 |-- README.md
 |-- requirements.txt
 |-- data/
