@@ -86,7 +86,11 @@ def train_supervised_models(daily: pd.DataFrame, seed: int = 42) -> tuple[pd.Dat
     _add_baseline_rows(metrics_rows, prediction_frames, frame, X_all, y, test_mask)
 
     for feature_set, numeric_features in FEATURE_SETS.items():
-        selected_features = [feature for feature in numeric_features if feature in X_all.columns] + profile_features + person_features
+        selected_features = list(dict.fromkeys(
+            [feature for feature in numeric_features if feature in X_all.columns]
+            + profile_features
+            + person_features
+        ))
         model = RandomForestRegressor(
             n_estimators=250,
             max_depth=16,

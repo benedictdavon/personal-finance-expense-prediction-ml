@@ -1,5 +1,7 @@
 # Personal Finance Expense Prediction ML
 
+This is a synthetic-data ML project for daily expense prediction and person-level spending-behavior clustering. It is an offline research/coursework prototype, not a personal-finance product and not trained on real financial records.
+
 Small Python ML project for synthetic personal finance data
 
 The project generates transactions for 50 student personas, builds daily spending features, trains Random Forest expense predictors, and clusters people by spending behavior
@@ -62,6 +64,8 @@ results/metrics/dataset_comparison.csv
 | `stress_test_1y` | 1 | 38,141 | 508 | 5244.42 | 653.15 | -0.055 | 2 | 0.714 |
 
 The realistic and stress-test datasets are much harder than the baseline data
+
+See [`docs/evaluation-provenance.md`](docs/evaluation-provenance.md) for the split and synthetic-data limitations.
 
 Longer realistic histories help the model learn more stable patterns for 2-year and 3-year runs, while the 5-year run is harder because inflation, shocks, and missing logs accumulate
 
@@ -186,8 +190,8 @@ AI-Capstone-Homework-1/
 ## Setup
 
 ```bash
-git clone https://github.com/benedictdavon/AI-Capstone-Homework-1.git
-cd AI-Capstone-Homework-1
+git clone https://github.com/benedictdavon/personal-finance-expense-prediction-ml.git
+cd personal-finance-expense-prediction-ml
 python -m venv .venv
 ```
 
